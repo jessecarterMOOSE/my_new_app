@@ -18,7 +18,9 @@ validParams<MyNewAppApp>()
 MyNewAppApp::MyNewAppApp(InputParameters parameters) : MooseApp(parameters)
 {
   MyNewAppApp::registerAll(_factory, _action_factory, _syntax);
-  BisonApp::registerAll(_factory, _action_factory, _syntax);
+  //BisonApp::registerAll(_factory, _action_factory, _syntax);
+  BisonApp::registerSyntax(_factory);
+  BisonApp::associateSyntax(_syntax, _action_factory);
 }
 
 MyNewAppApp::~MyNewAppApp() {}
