@@ -45,8 +45,9 @@ include $(MOOSE_DIR)/modules/modules.mk
 ###############################################################################
 
 # dep apps
-APPLICATION_DIR    := $(CURDIR)
-APPLICATION_NAME   := my_new_app
+BISON_DIR          ?= $(CURDIR)/bison
+APPLICATION_DIR    := $(BISON_DIR)
+APPLICATION_NAME   := bison
 BUILD_EXEC         := yes
 GEN_REVISION       := no
 include            $(FRAMEWORK_DIR)/app.mk

@@ -1,0 +1,3 @@
+[submodule "bison"]
+	path = bison
+	url = git@hpcgitlab.hpc.inl.gov:idaholab/bison.git
